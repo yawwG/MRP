@@ -4,15 +4,9 @@ We developed a Multi-modal Response Prediction (MRP) system for instant predicti
 
 ## Neoadjuvant Therapy Pathway
 <img src="https://github.com/yawwG/MRP/blob/main/figures/clinical_pathway.png"/>
-Fig 1. **a. Pre-NAT phase.** BC is diagnosed following a tumor screening/diagnosis (mammography and/or ultrasound) and biopsy, subsequent histopathology analysis, and a staging breast MRI. These measures help derive demographic, radiological, clinical and histopathological variables describing the patient's state at diagnosis. **b. Mid-NAT phase.** The mid-NAT MRI is performed to assess the response and see if therapy adjustments for unresponsive patients. **c. Post-NAT phase.** Breast MRI is used to assess if patients have achieved pCR. Subsequently, patients undergo surgery, and a histological examination is performed, assessing the Post-NAT TN, which is the gold standard.  
 
 ## Model system
 <img src="https://github.com/yawwG/MRP/blob/main/figures/structure.png"/>
-Fig 2. **a. Model development.** In this work, we developed and evaluated a deep learning system that utilizes multiple modalities to predict the response of breast cancer patients across neoadjuvant therapy (NAT) care. The system incorporates deep neural networks trained on Pre-NAT mammogram images and longitudinal MRI scans through NAT, which were retrospectively gathered. In addition to the imaging data, we collected auxiliary information referred to as rhpc which includes radiological assessments (r), histopathological assessments (h), personal patient records (p), and clinical data (c).
-After data retrieval, iMGrhpc and iMRrhpc were modeled independently, where iMGrhpc is based on Pre-NAT mammogram and rhpc data, while iMRrhpc is based on longitudinal MRIs embedding temporal information and rhpc data. These models were further utilized to create an aggregated model called MRP, which aggregates and optimizes the outputs of iMGrhpc and iMRrhpc.
-**b. NAT response assessment of AI model and reader study.** To assess the performance of MRP in predicting the pathological response (pCR vs. non-pCR) at different stages, including Pre-NAT (before administration of NAT), Mid-NAT (during therapy), and Post-NAT (prior to surgery), we validated the model using standard metrics: AUROC (Area Under Receiver Operating Characteristic Curve) and AUPRC (Area Under Precision-Recall Curve). In order to compare the performance of MRP with human experts, we conducted a reader study involving six international breast radiologists. The readers interpreted a randomly selected subset of MRI examinations and provided their predictions of the probability of patient response to therapy. 
-**c. External validation.** Additionally, we evaluated our system on an external dataset obtained from Duke University (288 patients) to assess its generalizability. 
-**d. Personalizing management in clinical practice.** Furthermore, we simulated two scenarios to assess the system's ability to identify non-pCR patients before neoadjuvant therapy in whom toxic treatments may be timely adapted, and to identify pCR (ypT0) patients before surgery who might not need surgical procedures. This simulation utilized a decision curve analysis (DCA) methodology. Circled C stands for current clinical practice; Circled AI stands for our MRP system suggested strategy.
 
 ## Environment Setup
 Start by [installing PyTorch 1.8.1](https://pytorch.org/get-started/locally/) with the right CUDA version, then clone this repository and install the dependencies.  
@@ -62,8 +56,8 @@ Email: ritse.mann@radboudumc.nl (Ritse Mann); taotanjs@gmail.com (Tao Tan); y.ga
 
 Links: [Netherlands Cancer Institute](https://www.nki.nl/), [Radboud University Medical Center](https://www.radboudumc.nl/en/patient-care), [Maastricht University](https://www.maastrichtuniversity.nl/nl), [St Joseph’s Healthcare Hamilton](https://www.stjoes.ca/) and [The University of Hong Kong](https://www.hku.hk/) 
 <div align="center">
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/NKI.png" width="166.98" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/RadboudUMC.png" width="231" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/Maastricht.png" width="237.6" height="87.12"/>  
+<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/NKI.png" width="166.98" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/RadboudUMC.png" width="231" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/Maastricht.png" width="237.6" height="87.12"/>  <img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="104"/> 
  </div>
  <div align="center">
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="87.12"/> <img src="https://github.com/yawwG/MRP/blob/main/figures/st_joseph's.png" width="100" height="87.12"/>
+<img src="https://github.com/yawwG/MRP/blob/main/figures/st_joseph's.png" width="140" height="87.12"/>
  </div>
