@@ -3,10 +3,10 @@
 We developed a Multi-modal Response Prediction (MRP) system for instant prediction in Neoadjuvant Therapy (NAT) in breast cancer treatment. Using diverse clinical data, MRP mimics physician assessments, aided by a multi-task learning module for practicality in multi-center hospitals. Validated across centers and reader studies, MRP matches radiologists' performance and outperforms in predicting pCR in the Pre-NAT phase. Clinical utility assessment shows MRP's potential: reducing treatment toxicity by 35.8% in Pre-NAT and preventing surgeries by 16.7% in Post-NAT, without mispredictions. Our work enhances AI applications in personalized treatment decisions.
 
 ## Neoadjuvant Therapy Pathway
-(https://github.com/yawwG/MRP/blob/main/figures/clinical_pathway.png)
+<img src="https://github.com/yawwG/MRP/blob/main/figures/clinical_pathway.png"/>
 
 ## Model system
-(https://github.com/yawwG/MRP/blob/main/figures/structure.png)
+<img src="https://github.com/yawwG/MRP/blob/main/figures/structure.png"/>
 
 ## Environment Setup
 Start by [installing PyTorch 1.8.1](https://pytorch.org/get-started/locally/) with the right CUDA version, then clone this repository and install the dependencies.  
@@ -56,9 +56,6 @@ Email: ritse.mann@radboudumc.nl (Ritse Mann); taotanjs@gmail.com (Tao Tan); y.ga
 
 Links: [Netherlands Cancer Institute](https://www.nki.nl/), [Radboud University Medical Center](https://www.radboudumc.nl/en/patient-care), [Maastricht University](https://www.maastrichtuniversity.nl/nl), [St Joseph’s Healthcare Hamilton](https://www.stjoes.ca/) and [The University of Hong Kong](https://www.hku.hk/) 
 
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/NKI.png" width="166.98" height="87.12"/>
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/RadboudUMC.png" width="231" height="87.12"/>
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/Maastricht.png" width="237.6" height="87.12"/>  
+<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/NKI.png" width="166.98" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/RadboudUMC.png" width="231" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/Maastricht.png" width="237.6" height="87.12"/>  
 
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="87.12"/>
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/st joseph's.png" width="104" height="87.12"/>
+<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/st_joseph's.png" width="104" height="87.12"/>
