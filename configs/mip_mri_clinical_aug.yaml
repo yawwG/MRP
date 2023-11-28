@@ -1,0 +1,72 @@
+experiment_name: 'INB_classifier'
+phase: 'classification'
+resnet50: true
+mip: true
+modal: 'MRI'
+datasetname: 'inhouse'
+finetune: false
+clinical: both
+mask_clinical: true
+image_branch_pred: true
+factor_predictor: true
+pretrain_path_resnet18: '/resnet_18_23dataset.pth'
+pretrain_path_resnet50: '/resnet_50_23dataset.pth'
+csv: 'dataset.csv'
+
+lightning:
+    trainer:
+       gpus: '1'
+       max_epochs: 200
+       distributed_backend: 'dp'
+       gradient_clip_val: 0.25
+       lr: 1e-4
+       precision: 16
+    checkpoint_callback:
+        monitor: 'val_auroc'
+        dirpath: 'output/'
+        save_last: true
+        mode: max
+        save_top_k: 3
+    early_stopping_callback:
+        monitor: 'val_auroc'
+        min_delta: 0.00
+        patience: 200
+        verbose: False
+        mode: 'max'
+    logger:
+        logger_type: 'WandbLogger'
+        save_dir: 'output/'
+        project: 'MRP'
+model:
+    vision:
+        model_name: 'resnet_50'
+        freeze_cnn: false
+        pretrained: true
+        num_targets: 1
+#    checkpoint: '/last.ckpt' # for test
+data:
+    dataset: INB
+    image:
+        imsize: 366
+    transform: False
+
+transforms:
+    norm: 'half'
+#    random_crop:
+#        crop_size: 1024,512
+
+train:
+    batch_size: 8
+    num_workers: 0
+    loss_fn:
+        type: BCE
+    optimizer:
+        name: 'Adam'
+        weight_decay: 1e-6
+    scheduler:
+        name: 'plateau'
+        monitor: 'val_loss'
+        interval: 'epoch'
+        frequency: 3
+test:
+     batch_size: 1
