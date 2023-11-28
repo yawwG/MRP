@@ -58,4 +58,4 @@ Links: [Netherlands Cancer Institute](https://www.nki.nl/), [Radboud University 
 
 <img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/NKI.png" width="166.98" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/RadboudUMC.png" width="231" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/Maastricht.png" width="237.6" height="87.12"/>  
 
-<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="87.12"/><img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/st_joseph's.png" width="104" height="87.12"/>
+<img src="https://github.com/yawwG/Visualize-what-you-learn/blob/main/figures/hku.png" width="104" height="87.12"/><img src="https://github.com/yawwG/MRP/blob/main/figures/st_joseph's.png" width="104" height="87.12"/>
